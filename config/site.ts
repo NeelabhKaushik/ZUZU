@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: "ZUZU",
-  description: "ZUZU is a modern, minimal, and sustainable clothing brand.",
+  description: "ZUZU: Kicks for the Cool Kids.",
   footer: [
     { name: "Home", href: "/" },
     { name: "About", href: "#" },

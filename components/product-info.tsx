@@ -13,7 +13,7 @@ interface Props {
   product: SanityProduct
 }
 
-export function ProductInfo({ product }: Props) {
+export function ProductInfo({ product }: any) {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0])
   const { addItem, incrementItem, cartDetails } = useShoppingCart()
   const isInCart = !!cartDetails?.[product._id]
@@ -63,7 +63,7 @@ export function ProductInfo({ product }: Props) {
         <p>
           <strong>Sizes :</strong>
         </p>
-        {product.sizes.map((size) => (
+        {product.sizes.map((size : any) => (
           <Button
             onClick={() => setSelectedSize(size)}
             key={size}

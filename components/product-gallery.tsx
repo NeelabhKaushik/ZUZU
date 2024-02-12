@@ -8,17 +8,18 @@ import { SanityProduct } from "@/config/inventory"
 import { shimmer, toBase64 } from "@/lib/image"
 
 interface Props {
-  product: SanityProduct
+  product: any
 }
 
-export function ProductGallery({ product }: Props) {
+export function ProductGallery({ product }: any) {
   const [selectedImage, setSelectedImage] = useState(0)
+  console.log(product)
   return (
     <div className="flex flex-col-reverse">
       {/* Image Grid */}
       <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
         <ul className="grid grid-cols-4 gap-6">
-          {product.images.map((image, index) => (
+          {product.images.map((image: any, index: any) => (
             <div
               key={image._key as string}
               onClick={() => setSelectedImage(index)}

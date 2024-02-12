@@ -62,6 +62,7 @@ export function CartSummary() {
             {formatCurrencyString({ value: totalAmount, currency: "INR" })}
           </dd>
         </div>
+        <dt className="text-base font-light"></dt>
       </dl>
 
       <div className="mt-6">
@@ -70,6 +71,13 @@ export function CartSummary() {
           {isLoading ? "Loading..." : "Checkout"}
         </Button>
       </div>
+      <dt className="text-base font-light">
+        <br />
+        Please use test card as{"  "}
+        <strong> 4000003560000008</strong>
+        <br />
+        Please use any future date and any 3 digit CVC
+      </dt>
     </section>
   )
 }
